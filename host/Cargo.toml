@@ -1,0 +1,18 @@
+[package]
+name = "host"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+proto = { path = "../proto" }
+scrap = "0.5"          # DXGI desktop duplication capture on Windows
+openh264 = "0.6"       # H.264 encoder (software; swap for NVENC/AMF later)
+enigo = "0.2"          # mouse + keyboard injection
+rand = "0.8"
+eframe = "0.29"       # native GUI window (egui)
+anyhow = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

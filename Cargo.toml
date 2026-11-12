@@ -1,0 +1,3 @@
+[workspace]
+members = ["proto", "host"]
+resolver = "2"
